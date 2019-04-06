@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/fuze-questionnaire/precache-manifest.c8a0eafd22a2e6f215fb459a537418bb.js"
+  "/fuze-questionnaire/precache-manifest.118db885f25a1b7a62e95c360236d043.js"
 );
 
 workbox.clientsClaim();
