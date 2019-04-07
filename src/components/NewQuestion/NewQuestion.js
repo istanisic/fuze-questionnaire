@@ -16,10 +16,10 @@ class NewQuestion extends React.Component {
   render() {
     return (
       <div className="NewQuestion">
-        <label>Add a new question:</label>
+        <p><strong>Add a new question:</strong></p>
         <textarea rows="2" id="label" type="text" placeholder="What is your favourite programming language?" />
         <textarea rows="4" id="options" type="text" placeholder="Enter your options separated by a comma. i.e Java, PHP, C, C++" />
-        <a href="#" onClick={this.handleClick}>
+        <a href="#" class="btn btn-primary" onClick={this.handleClick}>
           <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
           <span><strong>Add</strong></span>
         </a>

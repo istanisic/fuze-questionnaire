@@ -6,7 +6,7 @@ class Question extends React.Component {
 
   render() {
     return (
-      <div>
+      <div class="Question">
       <p>{this.props.label}</p>
       <div className="Question">
         {

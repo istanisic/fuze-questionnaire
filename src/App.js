@@ -8,13 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      questions: [{
-        label: "What is your favourite programming language?",
-        options: ["C++", "Java", "Javascript", "Python"],
-      }, {
-        label: "What is your favourite front-end library?",
-        options: ["Anuglar", "jQuery", "React", "Vue"],
-      }]
+      questions: []
     };
     this.handleClick = this.handleClick.bind(this);
   }
