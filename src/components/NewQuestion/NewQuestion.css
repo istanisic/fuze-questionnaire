@@ -1,3 +1,15 @@
 textarea {
   display: block;
+  width: 300px;
+  margin: 10px;
+}
+
+.NewQuestion {
+  border: 1px solid black;
+  display: inline-block;
+  float: right;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 15px;
 }

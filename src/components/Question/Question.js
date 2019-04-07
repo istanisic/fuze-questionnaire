@@ -11,7 +11,7 @@ class Question extends React.Component {
       <div className="Question">
         {
           this.props.options.map(option => {
-            return <Option option={option} />;
+            return <Option label={this.props.label} option={option} />;
           })
         }
       </div>
