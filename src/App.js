@@ -1,25 +1,37 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import QuestionList from './components/QuestionList/QuestionList';
+import NewQuestion from './components/NewQuestion/NewQuestion';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      questions: [{
+        label: "What is your favourite programming language?",
+        options: ["C++", "Java", "Javascript", "Python"],
+      }, {
+        label: "What is your favourite front-end library?",
+        options: ["Anuglar", "jQuery", "React", "Vue"],
+      }]
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick (label, options) {
+    const newQuestions = this.state.questions.slice();
+    newQuestions.push({label: label, options: options});
+    this.setState({
+      questions: newQuestions,
+    });
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <QuestionList questions={this.state.questions} />
+        <NewQuestion onClick={this.handleClick} />
       </div>
     );
   }
